@@ -1,0 +1,14 @@
+﻿import { chromium } from '@playwright/test';
+const browser = await chromium.launch({ channel: 'msedge', headless: true });
+const page = await browser.newPage({ viewport: { width: 1440, height: 1000 } });
+await page.goto('http://127.0.0.1:5173/');
+await page.screenshot({ path: 'artifacts/hero-desktop.png' });
+await page.locator('#productos').scrollIntoViewIfNeeded();
+await page.waitForTimeout(800);
+await page.screenshot({ path: 'artifacts/products-desktop.png' });
+await page.setViewportSize({ width: 390, height: 844 });
+await page.goto('http://127.0.0.1:5173/');
+await page.screenshot({ path: 'artifacts/hero-mobile.png' });
+await page.getByRole('button', { name: 'Solicitar acceso B2B' }).first().click();
+await page.screenshot({ path: 'artifacts/modal-mobile.png' });
+await browser.close();

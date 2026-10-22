@@ -1,5 +1,7 @@
 ﻿# Vitand
 
+> **Estado del repositorio:** demo/prototipo no productivo. Este repositorio fue creado únicamente como demostración visual/técnica y **no representa avance del desarrollo real de Vitand ni será la fuente de verdad del ecommerce de producción**. El desarrollo real de Fase 1 se realizará en un repositorio separado.
+
 Primera landing comercial de Vitand, creada con React, TypeScript, Vite y Tailwind CSS. Es una presentación del proyecto B2B, sin backend ni comercio electrónico.
 
 ## Ejecutar
